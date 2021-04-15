@@ -4,7 +4,7 @@ Zumo32U4LCD lcd;
 Zumo32U4Motors motors;
 Zumo32U4ButtonA buttonA;
 
-const uint_t motorSpeed = 300;
+const uint8_t motorSpeed = 300;
 
 void setup() {
   lcd.clear();
@@ -13,8 +13,7 @@ void setup() {
 }
 
 void loop() {
-  bool buttonPress = buttonA.getSingleDeboucedPress();
-}
+  bool buttonPress = buttonA.getSingleDebouncedPress();
 
 if(buttonPress) {
   delay(1000);
@@ -29,4 +28,6 @@ if(buttonPress) {
   delay(2000);
 
   motors.setSpeeds(0, 0);
+}
+
 }
