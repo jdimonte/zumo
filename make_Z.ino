@@ -19,7 +19,7 @@ void loop() {
     delay(1000);
 
     //turn left
-    for (int speed = 0; speed <= 200; speed++)
+    for (int speed = 0; speed <= 265; speed++)
     {
       motors.setRightSpeed(speed);
       motors.setLeftSpeed(-speed);
@@ -31,7 +31,7 @@ void loop() {
     motors.setSpeeds(0, 0);
     delay(500);
     //turn right
-    for (int speed = 0; speed <= 400; speed++)
+    for (int speed = 0; speed <= 320; speed++)
     {
       motors.setRightSpeed(-speed);
       motors.setLeftSpeed(speed);
@@ -39,11 +39,11 @@ void loop() {
     }
     //move forward
     motors.setSpeeds(motorSpeed, motorSpeed);
-    delay(1000);
+    delay(1200);
     motors.setSpeeds(0, 0);
     delay(500);
     //turn left
-    for (int speed = 0; speed <= 200; speed++)
+    for (int speed = 0; speed <= 320; speed++)
     {
       motors.setRightSpeed(speed);
       motors.setLeftSpeed(-speed);
@@ -52,6 +52,8 @@ void loop() {
     //move forward;
     motors.setSpeeds(motorSpeed, motorSpeed);
     delay(1000);
+    motors.setSpeeds(0, 0);
+    delay(500);
   }
 
 }
